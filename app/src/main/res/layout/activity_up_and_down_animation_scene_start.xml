@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpAndDownAnimationActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_sh"
+        android:src="@drawable/sherlock_holmes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_text_view"
+        android:layout_width="0dp"
+        android:scaleType="centerCrop"
+        android:layout_height="0dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_text_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tv"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/about_sherlock_holmes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="@id/iv_sh"
+        app:layout_constraintEnd_toEndOf="@id/iv_sh"
+        app:layout_constraintBottom_toBottomOf="@id/iv_sh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:padding="16dp"
+            android:text="Explore The Sherlock Holmes"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="22sp"
+            android:background="@drawable/tv_background_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

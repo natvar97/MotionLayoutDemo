@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layoutDescription="@xml/activity_youtube_scene"
+    tools:context=".YoutubeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_child"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/main_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_nature"
+        app:layout_constraintBottom_toBottomOf="@id/layout_child"
+        app:layout_constraintStart_toStartOf="@id/layout_child"
+        app:layout_constraintTop_toTopOf="@id/layout_child" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:alpha="0"
+        app:tint="@color/black"
+        android:src="@drawable/icon_play"
+        app:layout_constraintBottom_toBottomOf="@id/iv_close"
+        app:layout_constraintEnd_toStartOf="@id/iv_close"
+        app:layout_constraintTop_toTopOf="@id/iv_close" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0"
+        android:src="@drawable/icon_close"
+        app:layout_constraintBottom_toBottomOf="@id/layout_child"
+        app:layout_constraintEnd_toEndOf="@id/layout_child"
+        app:layout_constraintTop_toTopOf="@id/layout_child" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        android:alpha="0"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="textview"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/iv_play"
+        app:layout_constraintEnd_toStartOf="@id/iv_play"
+        app:layout_constraintStart_toEndOf="@id/main_image_view"
+        app:layout_constraintTop_toTopOf="@id/iv_play" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_child" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

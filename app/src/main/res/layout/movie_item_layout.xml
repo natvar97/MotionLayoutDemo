@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@color/black"
+    app:layoutDescription="@xml/movie_item_layout_scene">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_poster"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sherlock_series"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxWidth="200dp"
+        android:maxLines="1"
+        android:text="Master"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_movie_imdb"
+        app:layout_constraintStart_toEndOf="@id/iv_poster"
+        app:layout_constraintTop_toTopOf="@id/iv_poster"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_imdb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxWidth="200dp"
+        android:maxLines="1"
+        android:text="IMDb: 7.9/10"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_movie_director"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_title" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_movie_director"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxWidth="200dp"
+        android:maxLines="1"
+        android:text="Director: Lokesh Kanagaraj"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_movie_imdb"
+        app:layout_constraintTop_toBottomOf="@id/tv_movie_imdb" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
